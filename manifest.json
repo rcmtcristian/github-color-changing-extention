@@ -1,0 +1,33 @@
+{
+  "name": "Github Graph Themer",
+  "short_name": "Github Themer",
+  "version": "0.1.0",
+  "description": "Set different themes the GitHub contribution graph",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["*://github.com/*"],
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*"],
+      "js": ["./js/graphThemes.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/ext-icon.png", "assets/theme.svg"],
+      "matches": ["*://github.com/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_title": "Github Themer",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 3
+}

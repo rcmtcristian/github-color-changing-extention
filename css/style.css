@@ -1,0 +1,276 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+#top {
+  width: 40%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+input {
+  overflow: visible;
+}
+
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 2.5em 1em;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 1.6em;
+  line-height: 1.6;
+  background: #1d2024;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 22em;
+  width: 32em;
+  margin: auto;
+  color: rgb(212, 212, 212);
+}
+
+:root {
+  --bg: #fff;
+  --header-bg: #f4f5f6;
+  --button-bg: #9b4dca;
+  --button-disabled: #cfd0d4;
+  --button-disabled-border: #cfd0d4;
+  --button-text: #fff;
+  --twitter-button-bg: #00a9ed;
+  --text: #606c76;
+  --loading-text: #606c76;
+  --input-border: #d1d1d1;
+  --input-text: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111517;
+    --header-bg: #161c1e;
+    --text: #a49d91;
+    --input-border: #37444b;
+    --button-disabled: #2a3439;
+    --button-disabled-border: var(--input-border);
+    --loading-text: #rgb(164, 157, 145);
+    --input-text: #fff;
+  }
+}
+
+html {
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+input {
+  border: 0.1rem solid var(--input-border);
+  border-right: 0;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+  color: var(--input-text);
+  background-color: var(--bg);
+}
+
+input {
+  height: 4rem;
+  outline: none;
+}
+
+.Theme-preview {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+  border-radius: 2px;
+  margin: 0 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.Theme-preview span {
+  display: block;
+  width: 9px;
+  height: 9px;
+}
+
+@media (max-width: 970px) {
+  .App-themes-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.App-themes-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 0 1rem;
+  margin-left: -7.8em;
+  width: 40px;
+  margin-top: -4em;
+}
+
+.App-themes-list::-webkit-scrollbar {
+  display: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+label input {
+  border-right: 0.1rem solid var(--input-border);
+  margin-bottom: -1.4em !important;
+  z-index: 10;
+  position: relative;
+  appearance: none;
+  background: transparent;
+  box-sizing: border-box;
+  border: 3px solid white;
+  width: 23.7px;
+  height: 23.7px;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background: transparent;
+  cursor: pointer;
+}
+.themer,
+.themer *,
+.themer :after,
+.themer :before,
+.themer:after,
+.themer:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.themer {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  color: white;
+  background: #553f5c;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-mask-image: none;
+  /* padding: 1.5rem 3rem; */
+  perspective: 800px;
+  position: relative;
+  transform: rotateX(8deg);
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+}
+
+.themer:hover {
+  background: #6c4f7d;
+}
+
+.themer:active {
+  background: #4f3c5c;
+  transform: rotateX(25deg);
+}
+
+.themer:focus {
+  outline: none;
+}
+
+.themer:disabled {
+  background: #cfd0d4;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.themer:disabled:hover {
+  background: #cfd0d4;
+}
+
+.themer:-moz-focusring {
+  outline: auto;
+}
+.themer > img {
+  display: block;
+  color: #f4daff;
+  height: 30px;
+}
+.themer [hidden] {
+  display: none;
+}
+
+/******************************************
+/* git corner
+/*******************************************/
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
