@@ -3,15 +3,15 @@
   "short_name": "Github Themer",
   "version": "0.1.0",
   "description": "Set different themes the GitHub contribution graph",
-  "permissions": ["storage", "activeTab", "tabs"],
+  "permissions": ["storage", "tabs"],
   "host_permissions": ["*://github.com/*"],
   "background": {
-    "service_worker": "./js/background.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["*://github.com/*"],
-      "js": ["./js/graphThemes.js"]
+      "js": ["graphThemes.js"]
     }
   ],
   "web_accessible_resources": [
