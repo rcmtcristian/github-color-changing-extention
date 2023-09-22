@@ -1,49 +1,77 @@
-"use strict";
-function displayRadioValue() {
-  var ele = document.getElementsByName("theme");
+/* Getting the value of the radio button that is checked. */
+// const colorArrays = [
+//   [
+//     "rgb(22, 27, 34)",
+//     "rgb(99, 28, 3)",
+//     "rgb(189, 86, 29)",
+//     "rgb(250, 122, 24)",
+//     "rgb(253, 223, 104)",
+//   ],
+//   [
+//     "rgb(255, 238, 74)",
+//     "rgb(255, 197, 1)",
+//     "rgb(254, 150, 0)",
+//     "rgb(3, 0, 28)",
+//     "rgb(255, 0, 255)",
+//   ],
+//   [
+//     "rgb(0, 0, 0)",
+//     "rgb(127, 127, 127)",
+//     "rgb(255, 255, 255)",
+//     "rgb(200, 200, 200)",
+//     "rgb(100, 100, 100)",
+//   ],
+// ];
 
-  // Display the selected theme in the result div
-  for (let i = 0; i < ele.length; i++) {
-    if (ele[i].checked) {
-      document.getElementById("result").innerHTML = "theme: " + ele[i].value;
-    }
-  }
-}
+const colorArrays = [
+  [
+    "rgb(22, 27, 34)",
+    "rgb(99, 28, 3)",
+    "rgb(189, 86, 29)",
+    "rgb(250, 122, 24)",
+    "rgb(253, 223, 104)",
+  ],
+];
 
-/**
- * returns The current theme that is selected.
- */
+const myTheme = () => {
+  chrome.storage.local.get("favoriteColor", (themeValue) => {
+    let chosenColor = themeValue.favoriteColor;
 
-function currentSelectedTheme() {
-  let currentTheme = document.getElementById("result").innerHTML;
-  return currentTheme.split(":")[1].trim();
-}
+    const themes = {
+      standard: colorArrays[0],
+      classic: colorArrays[1],
+      githubDark: colorArrays[2],
+    };
 
-/**
- * This function saves the selected theme to the chrome storage.
- */
-function savingSelectedColor() {
-  let themeValue = currentSelectedTheme();
-  chrome.storage.sync.set(
-    {
-      favoriteColor: themeValue,
-    },
-    function () {
-      console.log("Value is set to " + themeValue);
-    }
-  );
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("#themeButton");
-  button.addEventListener("click", () => {
-    displayRadioValue();
+    const colors = themes[chosenColor] || [];
+    themeActivityOverview(colors);
+    themeContributionGraph(colors);
   });
+};
+
+chrome.storage.onChanged.addListener((changes) => {
+  if (changes.favoriteColor) {
+    myTheme();
+  }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const buttonTwo = document.querySelector("#setButton");
-  buttonTwo.addEventListener("click", () => {
-    savingSelectedColor();
+function themeContributionGraph(colors) {
+  console.log(colors, "maybe");
+  const { style } = document.querySelector(":root");
+
+  colors.forEach((color, i) => {
+    style.setProperty(`--color-calendar-graph-day-L${i}-bg`, color);
   });
+}
+
+function themeActivityOverview(colors) {
+  console.log(colors, "maybe");
+  const { style } = document.querySelector(".js-highlight-blob");
+  const color = colors[colors.length - 1];
+  style.fill = color;
+  style.stroke = color;
+}
+
+(function () {
+  myTheme();
 });
