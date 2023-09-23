@@ -1,37 +1,19 @@
 "use strict";
 
-// const colorArrays = [
-//   [
-//     "rgb(22, 27, 34)",
-//     "rgb(99, 28, 3)",
-//     "rgb(189, 86, 29)",
-//     "rgb(250, 122, 24)",
-//     "rgb(253, 223, 104)",
-//   ],
-
-//   [
-//     "rgb(0, 0, 0)",
-//     "rgb(127, 127, 127)",
-//     "rgb(255, 255, 255)",
-//     "rgb(200, 200, 200)",
-//     "rgb(100, 100, 100)",
-//   ],
-// ];
-
 const colorArrays = [
   ["#ffffff", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-  ["#ffffff", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
-  ["#101217", "#003820", "#00602d", "#10983d", "#27d545"],
+  ["#eeeeee", "#dcedc8", "#aed581", "#7cb342", "#33691e"],
+  ["#101217", "#005e35", "#00844a", "#00aa5f", "#00d074"],
   ["#212836", "#631c03", "#bd561d", "#fa7a18", "#fddf68"],
-  ["#ffffff", "#7FFFD4", "#76EEC6", "#66CDAA", "#458B74"],
+  [, "#044c46", "#098379", "#46e8d8", "#9cfcf0", "#b8fff7"],
   ["#181818", "#646464", "#A5A5A5", "#DDDDDD", "#F6F6F6"],
   ["#49006a", "#ac0279", "#f669a0", "#faa0ba", "#fcc5c0"],
-  ["#181818", "#263342", " #344E6C", " #416895", " #4F83BF"],
-  ["#2B2C2F", "#34353B", " #6FC1FF", " #19f9d8", " #FF4B82"],
+  ["#eeeeee", "#bbdefb", "#64b5f6", "#1e88e5", "#0d47a1"],
+  ["#9c1b5b", "#ca1a50", "#f37651", "#f6bf9d", "#faebdd"],
   ["#800826", " #bc0026", " #ff2e19", "#fc6e32", "#fed976"],
-  ["#ffffff", "#e48bdc", "#ca5bcc", "#a74aa8", "#61185f"],
-  ["#ffffff", "#a1dab4", "#41b6c4", "#2c7fb8", "#253494"],
-  ["#002b36", "#268bd2", "#2aa198", "#b58900", "#d33682"],
+  ["#eeeeee", "#faafe1", "#fb6dcc", "#fa3fbc", "#ff00ab"],
+  ["#eeeeee", "#fff9c4", "#fff176", "#ffd835", "#f57f17"],
+  ["#eeeeee", "#fed800", "#ff6f01", "#fd2f24", "#811d5e"],
   ["#fdf6e3", " #eee8d5", " #839496", " #586e75", " #073642"],
 ];
 
@@ -71,7 +53,7 @@ const colorArrays = [
       panda: colorArrays[8],
       flame: colorArrays[9],
       pink: colorArrays[10],
-      YlGnBu: colorArrays[11],
+      sunny: colorArrays[11],
       solarizedDark: colorArrays[12],
       solarizedLight: colorArrays[13],
     };
