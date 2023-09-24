@@ -30,15 +30,15 @@
       githubDark: ["#101217", "#005e35", "#00844a", "#00aa5f", "#00d074"],
       halloween: ["#212836", "#631c03", "#bd561d", "#fa7a18", "#fddf68"],
       teal: ["#044c46", "#098379", "#46e8d8", "#9cfcf0", "#b8fff7"],
-      leftPad: ["#181818", "#646464", "#A5A5A5", "#DDDDDD", "#F6F6F6"],
+      grayscale: ["#181818", "#646464", "#A5A5A5", "#DDDDDD", "#F6F6F6"],
       dracula: ["#49006a", "#ac0279", "#f669a0", "#faa0ba", "#fcc5c0"],
       blue: ["#eeeeee", "#bbdefb", "#64b5f6", "#1e88e5", "#0d47a1"],
       panda: ["#9c1b5b", "#ca1a50", "#f37651", "#f6bf9d", "#faebdd"],
       flame: ["#800826", " #bc0026", "#ff2e19", "#fc6e32", "#fed976"],
       pink: ["#eeeeee", "#faafe1", "#fb6dcc", "#fa3fbc", "#ff00ab"],
       sunny: ["#eeeeee", "#fff9c4", "#fff176", "#ffd835", "#f57f17"],
-      solarizedDark: ["#eeeeee", "#fed800", "#ff6f01", "#fd2f24", "#811d5e"],
-      solarizedLight: ["#fdf6e3", "#eee8d5", "#839496", "#586e75", "#073642"],
+      solarizedD: ["#eeeeee", "#fed800", "#ff6f01", "#fd2f24", "#811d5e"],
+      solarizedL: ["#fdf6e3", "#eee8d5", "#839496", "#586e75", "#073642"],
     };
 
     const colors = themes[theme] || [];
@@ -64,7 +64,7 @@ function displayRadioValue() {
   // Display the selected theme in the result div
   for (let i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
-      document.getElementById("result").innerHTML = "theme: " + ele[i].value;
+      document.getElementById("result").innerHTML = "Theme: " + ele[i].value;
     }
   }
 }
