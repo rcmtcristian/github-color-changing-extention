@@ -25,7 +25,7 @@
   async function init() {
     const theme = await getTheme();
     const themes = {
-      standard: ["#ffffff", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+      standard: ["", "", "", "", ""],
       classic: ["#eeeeee", "#dcedc8", "#aed581", "#7cb342", "#33691e"],
       githubDark: ["#101217", "#005e35", "#00844a", "#00aa5f", "#00d074"],
       halloween: ["#212836", "#631c03", "#bd561d", "#fa7a18", "#fddf68"],
