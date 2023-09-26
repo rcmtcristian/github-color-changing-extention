@@ -2,8 +2,8 @@
   "name": "Github Contribution Graph Themer",
   "short_name": "Github Contribution Themer",
   "version": "0.1.0",
-  "description": "Set different themes the GitHub contribution graph",
-  "permissions": ["storage", "scripting", "activeTab"],
+  "description": "Set different themes to the GitHub contribution graph",
+  "permissions": ["storage"],
   "host_permissions": [
     "*://github.com/*"
   ],
