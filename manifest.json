@@ -1,9 +1,9 @@
 {
   "name": "Gitcolor - Github Contribution Themer",
   "short_name": "Gitcolor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set different themes to the GitHub contribution graph",
-  "permissions": ["storage", "scripting", "activeTab"],
+  "permissions": ["storage"],
   "host_permissions": [
     "*://github.com/*"
   ],
