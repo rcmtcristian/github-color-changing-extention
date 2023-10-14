@@ -39,6 +39,30 @@
       sunny: ["#eeeeee", "#fff9c4", "#fff176", "#ffd835", "#f57f17"],
       solarizedD: ["#eeeeee", "#fed800", "#ff6f01", "#fd2f24", "#811d5e"],
       solarizedL: ["#fdf6e3", "#eee8d5", "#839496", "#586e75", "#073642"],
+      // tritanopia: [
+      //   "#3DCAC5",
+      //   "#5FB4AE",
+      //   "#7F9E96",
+      //   "#E867F",
+      //   "#B86E68",
+      //   "#F2292C",
+      //   "#F23433",
+      //   "#F23E39",
+      //   "#F74046",
+      //   "#FB5860",
+      // ],
+      // rainbow: [
+      //   "#FFFFFF",
+      //   "#3A86FF",
+      //   "#5F5FF6",
+      //   "#8338EC",
+      //   "#A22ACD",
+      //   "#85607",
+      //   "#FD2B3B",
+      //   "#FD8A09",
+      //   "#FF006E",
+      //   "#FFBEOB",
+      // ],
     };
 
     const colors = themes[theme] || [];
