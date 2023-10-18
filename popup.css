@@ -181,6 +181,8 @@ input[type="radio"]:checked {
   background: transparent;
   cursor: pointer;
 }
+
+/* Button */
 .themer,
 .themer *,
 .themer :after,
@@ -192,54 +194,55 @@ input[type="radio"]:checked {
 }
 
 .themer {
-  font-weight: 700;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  outline: none;
-  color: #eaddca;
-  border: 2px dashed #eaddca;
-  border-radius: 15px;
-  background-color: #6c4f7d;
-  box-shadow: 0 0 0 4px #6c4f7d, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-  transition: 0.1s ease-in-out, 0.4s color;
+  appearance: none;
+  background-color: #eef2ff;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #553f5c;
+  box-shadow: rgb(85, 63, 92) 0 2px 4px, rgb(85, 63, 92) 0 7px 13px -3px,
+    #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: rgb(85, 63, 92);
   cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 65px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 20px;
 }
-
-button:active {
-  transform: translateX(0.1em) translateY(0.1em);
-  box-shadow: 0 0 0 4px #4f3c5c, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+.themer > * {
 }
-.themer:hover {
-  background: #6c4f7d;
-}
-
-/* .themer:active {
-  background: #4f3c5c;
-  transform: rotateX(25deg);
-} */
 
 .themer:focus {
   outline: none;
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(85, 63, 92, 0.4) 0 2px 4px,
+    rgba(85, 63, 92, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
 
-.themer:disabled {
-  background: #cfd0d4;
-  color: #fff;
-  cursor: not-allowed;
+.themer:hover {
+  box-shadow: rgba(85, 63, 92, 0.3) 0 4px 8px,
+    rgba(85, 63, 92, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
 }
 
-.themer:disabled:hover {
-  background: #cfd0d4;
-}
-
-.themer:-moz-focusring {
-  outline: auto;
+.themer:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
 }
 .themer > img {
   display: block;

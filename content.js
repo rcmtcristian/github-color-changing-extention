@@ -97,6 +97,22 @@ function displayRadioValue() {
  * returns The current theme that is selected.
  */
 
+let selectedColor = "";
+function selectedRadioValue() {
+  var ele = document.getElementsByName("theme");
+
+  // Display the selected theme in the result div
+  for (let i = 0; i < ele.length; i++) {
+    if (ele[i].checked) {
+      return (selectedColor = ele[i].value);
+    }
+  }
+}
+
+/**
+ * returns The current theme that is selected.
+ */
+
 function currentSelectedTheme() {
   let currentTheme = document.getElementById("result").innerHTML;
   return currentTheme.split(":")[1].trim();
@@ -107,15 +123,15 @@ function currentSelectedTheme() {
  * This function saves the selected theme to the chrome storage.
  */
 function savingSelectedColor() {
-  let themeValue = currentSelectedTheme();
+  let themeValue = selectedRadioValue();
   chrome.storage.local.set({
     favoriteColor: themeValue,
   });
 }
 
-selectButton.addEventListener("click", () => {
-  displayRadioValue();
-});
+// selectButton.addEventListener("click", () => {
+//   displayRadioValue();
+// });
 
 applyButton.addEventListener("click", () => {
   savingSelectedColor();
