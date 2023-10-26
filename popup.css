@@ -46,7 +46,11 @@ html {
   font-size: 62.5%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+<<<<<<< HEAD
   -moz-osx-font-smoothing: random;
+=======
+  -moz-osx-font-smoothing: rainbow;
+>>>>>>> e059767a1f6cf4c54acb93ad5d358fe7e2bdf7ce
 }
 
 body {
