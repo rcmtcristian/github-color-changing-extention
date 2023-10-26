@@ -20,16 +20,6 @@
     const color = colors[colors.length - 1];
     blobStyle.fill = color;
     blobStyle.stroke = color;
-    //make it based on the first number of the width instead
-    // for each width, change the color of the progress bar
-    // loop through the li in the ul and get the width of each
-    // if width is 25%, change the color of the progress bar to the first color
-    // if width is 50%, change the color of the progress bar to the second color
-    // if width is 75%, change the color of the progress bar to the third color
-    // if width is 100%, change the color of the progress bar to the fourth color
-    const progressbarStyle =
-      document.getElementsByClassName(".Progress-item").style;
-    progressbarStyle.backgroundColor = "red";
     // progressbarStyle.setProperty("background-color", color);
     //make it based on the first number of the width instead
     // for each width, change the color of the progress bar
