@@ -64,6 +64,7 @@
       random: rainbowTheme,
       dracula: ["#49006a", "#ac0279", "#f669a0", "#faa0ba", "#fcc5c0"],
       blue: ["#eeeeee", "#bbdefb", "#64b5f6", "#1e88e5", "#0d47a1"],
+      // deepBlue: ["#eeeeee", "#9ba8e9", "#4063c4", "#304ea1", "#21396e"],
       panda: ["#9c1b5b", "#ca1a50", "#f37651", "#f6bf9d", "#faebdd"],
       flame: ["#800826", " #bc0026", "#ff2e19", "#fc6e32", "#fed976"],
       pink: ["#eeeeee", "#faafe1", "#fb6dcc", "#fa3fbc", "#ff00ab"],
@@ -144,4 +145,48 @@ function savingSelectedColor() {
 applyButton.addEventListener("click", () => {
   savingSelectedColor();
   // reload();
+  applyTheme();
+
+  // Observe DOM modifications
+  var container = document.getElementById("js-pjax-container");
+
+  if (container) {
+    var observer = new MutationObserver(function (mutations) {
+      var graph = document.getElementsByClassName("js-yearly-contributions")[0];
+
+      if (graph) {
+        applyTheme();
+      }
+    });
+
+    var config = { subtree: true, childList: true };
+
+    observer.observe(container, config);
+  }
 });
+
+// Call applyOptions after document load
+
+// (function () {
+//   // Call applyOptions after document load
+//   applyTheme();
+
+//   // Observe DOM modifications
+//   var container = document.getElementById("js-pjax-container");
+
+//   if (container) {
+//     var observer = new MutationObserver(function (mutations) {
+//       var graph = document.getElementsByClassName(
+//         "js-yearly-contributions"
+//       )[0];
+
+//       if (graph) {
+//         applyTheme();
+//       }
+//     });
+
+//     var config = { subtree: true, childList: true };
+
+//     observer.observe(container, config);
+//   }
+// })();
