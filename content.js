@@ -138,13 +138,9 @@ function savingSelectedColor() {
   });
 }
 
-// selectButton.addEventListener("click", () => {
-//   displayRadioValue();
-// });
-
 applyButton.addEventListener("click", () => {
   savingSelectedColor();
-  // reload();
+
   applyTheme();
 
   // Observe DOM modifications
@@ -164,29 +160,3 @@ applyButton.addEventListener("click", () => {
     observer.observe(container, config);
   }
 });
-
-// Call applyOptions after document load
-
-// (function () {
-//   // Call applyOptions after document load
-//   applyTheme();
-
-//   // Observe DOM modifications
-//   var container = document.getElementById("js-pjax-container");
-
-//   if (container) {
-//     var observer = new MutationObserver(function (mutations) {
-//       var graph = document.getElementsByClassName(
-//         "js-yearly-contributions"
-//       )[0];
-
-//       if (graph) {
-//         applyTheme();
-//       }
-//     });
-
-//     var config = { subtree: true, childList: true };
-
-//     observer.observe(container, config);
-//   }
-// })();
