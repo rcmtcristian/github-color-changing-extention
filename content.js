@@ -21,7 +21,29 @@ function applyTheme(colors) {
   const { style } = document.querySelector(":root");
 
   colors.forEach((color, i) => {
-    style.setProperty(`--color-calendar-graph-day-L${i}-bg`, color);
+    style.setProperty(`--contribution-default-bgColor-${i}`, color);
+    // style.setProperty(`--color-calendar-graph-day-L${i}-bg`, color); // Pre-2025
+
+    // # Contribution Cells
+    //
+    // .ContributionCalendar-day[data-level="2"] {
+    //   fill: var(--contribution-default-bgColor-2);
+    //   background-color: var(--contribution-default-bgColor-2);
+    //   border-color: var(--contribution-default-borderColor-2);
+
+    // # Default Root Cell Styles
+    //
+    // --contribution-default-bgColor-0: #010409;
+    // --contribution-default-bgColor-1: #007728;
+    // --contribution-default-bgColor-2: #02a232;
+    // --contribution-default-bgColor-3: #0ac740;
+    // --contribution-default-bgColor-4: #4ae168;
+    //
+    // --contribution-default-borderColor-0: #ffffff;
+    // --contribution-default-borderColor-1: var(--contribution-default-borderColor-0);
+    // --contribution-default-borderColor-2: var(--contribution-default-borderColor-0);
+    // --contribution-default-borderColor-3: var(--contribution-default-borderColor-0);
+    // --contribution-default-borderColor-4: var(--contribution-default-borderColor-0);
   });
 
   // const blobStyle = document.querySelector(".js-highlight-blob").style;
