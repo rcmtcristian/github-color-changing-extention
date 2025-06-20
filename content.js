@@ -1,12 +1,9 @@
 "use strict";
 
-// content.js
-
 // When updating this file, make sure to
 // RELOAD THE EXTENSION in Chrome to apply the changes.
 
-// const bodyElem = document.querySelector("body");
-const targetNode = document.body; // Or the closest common ancestor of the element.
+const targetNode = document.body;
 const config = { childList: true, subtree: true };
 
 function getTheme() {
