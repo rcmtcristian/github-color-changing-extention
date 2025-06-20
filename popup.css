@@ -46,11 +46,7 @@ html {
   font-size: 62.5%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-<<<<<<< HEAD
-  -moz-osx-font-smoothing: random;
-=======
-  -moz-osx-font-smoothing: rainbow;
->>>>>>> e059767a1f6cf4c54acb93ad5d358fe7e2bdf7ce
+  -moz-osx-font-smoothing: antialiased;
 }
 
 body {
@@ -229,21 +225,18 @@ input[type="radio"]:checked {
   will-change: box-shadow, transform;
   font-size: 20px;
 }
-.themer > * {
-}
+/* .themer > * {} */
 
 .themer:focus {
   outline: none;
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(85, 63, 92, 0.4) 0 2px 4px,
     rgba(85, 63, 92, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
-
 .themer:hover {
   box-shadow: rgba(85, 63, 92, 0.3) 0 4px 8px,
     rgba(85, 63, 92, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
   transform: translateY(-2px);
 }
-
 .themer:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
