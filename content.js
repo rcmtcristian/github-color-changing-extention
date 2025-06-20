@@ -46,13 +46,12 @@ function applyTheme(colors) {
     // --contribution-default-borderColor-4: var(--contribution-default-borderColor-0);
   });
 
-  // const blobStyle = document.querySelector(".js-highlight-blob").style;
-  // const blobStyle = document.querySelector(".graph-before-activity-overview").style;
-  // const blobStyle = document.querySelector(".js-calendar-graph-table").style;
-  const blobStyle = document.querySelector(".ContributionCalendar-day").style;
-  const color = colors[colors.length - 1];
-  blobStyle.fill = color;
-  blobStyle.stroke = color;
+  const blobStyle = document.querySelector(".js-highlight-blob")?.style;
+  if (blobStyle && colors.length > 0) {
+    const color = colors[colors.length - 1];
+    blobStyle.fill = color;
+    blobStyle.stroke = color;
+  }
   // progressbarStyle.setProperty("background-color", color);
   // make it based on the first number of the width instead
   // for each width, change the color of the progress bar
