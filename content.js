@@ -46,6 +46,9 @@ function applyTheme(colors) {
     // --contribution-default-borderColor-4: var(--contribution-default-borderColor-0);
   });
 
+  // The blob selector targets a graph that shows on a profile page when the
+  // "Activity overview" option is selected from the "Contribution settings"
+  // panel which is accessible just above the contribution graph.
   const blobStyle = document.querySelector(".js-highlight-blob")?.style;
   if (blobStyle && colors.length > 0) {
     const color = colors[colors.length - 1];
