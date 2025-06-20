@@ -36,9 +36,9 @@ function displayRadioValue() {
   // Display the selected theme in the result div.
   for (let i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
-      const resultDiv = document.getElementById("result");
-      if (resultDiv) {
-        resultDiv.innerHTML = "Theme: " + ele[i].value;
+      const selectedThemeDiv = document.getElementById("selectedTheme");
+      if (selectedThemeDiv) {
+        selectedThemeDiv.innerHTML = ele[i].value;
       }
     }
   }

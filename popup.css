@@ -22,7 +22,7 @@
 /*******************************************/
 
 #top {
-  width: 40%;
+  width: 50%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
@@ -60,7 +60,7 @@ body {
 
   justify-content: center;
   display: flex;
-  height: 22em;
+  /* height: 22em; */
   width: 32em;
   margin: auto;
   color: rgb(212, 212, 212);
@@ -146,6 +146,27 @@ input {
   margin-left: -7.8em;
   width: 40px;
   margin-top: -4em;
+}
+
+.App-themes-list > .selected-theme-span {
+  grid-column: 1 / span 3;
+}
+
+.App-themes-list > .selected-theme {
+  background-color: rgb(25, 25, 25);
+  border-bottom: 1px dotted darkgray;
+  border-top: 1px dotted darkgray;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 0.7em;
+  padding: 5px 0;
+  text-align: center;
+}
+.App-themes-list > .selected-theme::before {
+  content: "[ ";
+}
+.App-themes-list > .selected-theme::after {
+  content: " ]";
 }
 
 .App-themes-list::-webkit-scrollbar {
