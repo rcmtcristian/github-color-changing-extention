@@ -19,6 +19,7 @@ function applyTheme(colors) {
 
   colors.forEach((color, i) => {
     style.setProperty(`--contribution-default-bgColor-${i}`, color);
+    style.setProperty(`--contribution-default-borderColor-${i}`, '#ffffff0d');
     // style.setProperty(`--color-calendar-graph-day-L${i}-bg`, color); // Pre-2025
 
     // # Contribution Cells
