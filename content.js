@@ -17,9 +17,13 @@ function getTheme() {
 function applyTheme(colors) {
   const { style } = document.querySelector(":root");
 
+  // When resetting to 'standard', if the first themed color is empty, the border color
+  // should also be empty. If not, it will be set to GitHub's semi-transparent white.
+  const borderColor = colors[0] ? '#ffffff0d' : '';
+
   colors.forEach((color, i) => {
     style.setProperty(`--contribution-default-bgColor-${i}`, color);
-    style.setProperty(`--contribution-default-borderColor-${i}`, '#ffffff0d');
+    style.setProperty(`--contribution-default-borderColor-${i}`, borderColor);
     // style.setProperty(`--color-calendar-graph-day-L${i}-bg`, color); // Pre-2025
 
     // # Contribution Cells
