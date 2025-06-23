@@ -5,13 +5,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get the saved theme from storage.
   chrome.storage.local.get("favoriteColor", (result) => {
-    if (result.favoriteColor) {
-      // Select the radio button for the saved theme.
-      const savedThemeRadio = document.querySelector(`input[name="theme"][value="${result.favoriteColor}"]`);
-      if (savedThemeRadio) {
-        savedThemeRadio.checked = true;
-        displayRadioValue();
-      }
+    const themeName = result.favoriteColor ? result.favoriteColor : 'standard';
+    const themeRadio = document.querySelector(`input[name="theme"][value="${themeName}"]`);
+
+    if (themeRadio) {
+      themeRadio.checked = true;
+      displayRadioValue();
     }
   });
 
